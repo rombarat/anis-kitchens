@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5F0E8" />
+
+  <title>אניס מטבחים — מטבחי יוקרה בהתאמה אישית</title>
+  <meta name="description" content="אניס מטבחים — תכנון ויצירת מטבחי יוקרה בהתאמה אישית. סטנדרט גימור בלתי מתפשר, אובססיה לפרטים, ליווי אישי משלב הסקיצה ועד מסירת המפתח." />
+  <meta name="author" content="אניס מטבחים" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:title" content="אניס מטבחים — מטבחי יוקרה בהתאמה אישית" />
+  <meta property="og:description" content="תכנון ויצירה של מטבחים מותאמים אישית, בסטנדרט בלתי מתפשר." />
+  <meta property="og:image" content="brian-zajac-T28LLOIuJj4-unsplash.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">דלגו לתוכן הראשי</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-row">
+      <a href="#top" class="brand" aria-label="אניס מטבחים — דף הבית">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">
+          <span class="brand-name">אניס מטבחים</span>
+          <span class="brand-sub">מטבחי יוקרה בהתאמה אישית</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="ניווט ראשי">
+        <ul>
+          <li><a href="#about">אודות</a></li>
+          <li><a href="#projects">פרויקטים</a></li>
+          <li><a href="#why">היתרון</a></li>
+          <li><a href="#process">התהליך</a></li>
+          <li><a href="#testimonials">המלצות</a></li>
+          <li><a href="#contact" class="nav-cta">לפגישת ייעוץ</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="פתיחת תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul>
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#projects">פרויקטים</a></li>
+        <li><a href="#why">היתרון</a></li>
+        <li><a href="#process">התהליך</a></li>
+        <li><a href="#testimonials">המלצות</a></li>
+        <li><a href="#contact" class="nav-cta">לפגישת ייעוץ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-image" aria-hidden="true">
+        <img src="brian-zajac-T28LLOIuJj4-unsplash.jpg" alt="" loading="eager" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow reveal" data-delay="0">אניס מטבחים · Atelier</p>
+        <h1 id="heroTitle" class="display reveal" data-delay="120">
+          <span class="display-line">מטבחי יוקרה</span>
+          <span class="display-line italic">בהתאמה אישית</span>
+          <span class="display-line muted">לאנשים שלא מוכנים להתפשר על אף פרט.</span>
+        </h1>
+        <p class="hero-sub reveal" data-delay="320">
+          מטבח צריך להרגיש טבעי ונכון מהרגע הראשון, אבל החוכמה האמיתית היא שהוא יישאר מדויק ואיכותי גם בעוד שנים רבות. זה בדיוק מה שאני מתכנן ויוצר.
+        </p>
+        <div class="hero-cta reveal" data-delay="460">
+          <a href="#contact" class="btn btn-primary">
+            <span>בואו נדבר — לתיאום פגישת ייעוץ</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5l7 7-7 7M21 12H3" /></svg>
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <span>הצצה לפרויקטים</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>גלילה</span>
+        <span class="hero-scroll-line"></span>
+      </div>
+
+      <div class="hero-meta" aria-hidden="true">
+        <span>EST.</span>
+        <span class="hero-meta-divider"></span>
+        <span>תכנון · ייצור · ליווי</span>
+      </div>
+    </section>
+
+    <!-- ABOUT / חיבור אישי -->
+    <section class="about" id="about" aria-labelledby="aboutTitle">
+      <div class="container about-grid">
+        <div class="about-text">
+          <p class="eyebrow reveal">— החיבור האישי</p>
+          <h2 id="aboutTitle" class="section-title reveal">
+            המטבח הוא לא סתם עוד חדר —<br />
+            <span class="italic">הוא הלב של הבית.</span>
+          </h2>
+          <div class="about-body reveal">
+            <p>
+              אני מאמין שמטבח צריך לשרת אתכם, ולא ההפך. הוא חייב להיות פרקטי, חכם, ובעיקר — כזה שעושה חשק להיכנס אליו בכל יום מחדש.
+            </p>
+            <p>
+              זו הסיבה שכל פרויקט שלי מתחיל קודם כל בהקשבה: להבין באמת את אורח החיים שלכם. התוצאה הסופית היא לעולם לא <em>"עוד מטבח מפס ייצור"</em>, אלא יצירה שנתפרה במיוחד למידות, לצרכים ולחלומות שלכם.
+            </p>
+          </div>
+
+          <dl class="about-stats reveal">
+            <div>
+              <dt>ליווי</dt>
+              <dd>אישי וצמוד, מהסקיצה ועד המפתח</dd>
+            </div>
+            <div>
+              <dt>גימור</dt>
+              <dd>סטנדרט בלתי מתפשר במילימטר</dd>
+            </div>
+            <div>
+              <dt>תכנון</dt>
+              <dd>שחי את שגרת היומיום שלכם</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="about-figure reveal">
+          <img src="interior-modern-kitchen-with-wooden-details.jpg" alt="פינת מטבח אינטימית עם פרטי עץ כהים ושיש טבעי" loading="lazy" />
+          <figcaption>פרויקט נבחר · פרטים אינטימיים</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">— Selected Works</p>
+          <h2 id="projectsTitle" class="section-title reveal">
+            הצצה <span class="italic">לפרויקטים נבחרים</span>
+          </h2>
+        </header>
+
+        <div class="project-list">
+
+          <article class="project project--01 reveal">
+            <a href="#contact" class="project-media" aria-label="פרויקט מודרני בקווים נקיים — תל אביב">
+              <img src="3d-rendering-white-minimal-kitchen-with-wood-decoration.jpg" alt="מטבח לבן מינימליסטי עם אי וכיסאות בר, תאורת תליה ושיש דרמטי" loading="lazy" />
+            </a>
+            <div class="project-info">
+              <span class="project-num">01</span>
+              <h3 class="project-title">מטבח מודרני <span class="italic">בקווים נקיים</span></h3>
+              <p class="project-loc">תל אביב</p>
+              <p class="project-blurb">דירת מגורים פתוחה. עץ אלון ומשטח קוורץ לבן, התאמה לחיי משפחה ולאירוח.</p>
+            </div>
+          </article>
+
+          <article class="project project--02 reveal">
+            <a href="#contact" class="project-media" aria-label="פרויקט מטבח כפרי וחמים — בית פרטי בשרון">
+              <img src="beautiful-shot-modern-house-kitchen.jpg" alt="מטבח לבן מואר אור טבעי, אי משיש לבן, תאורת תליה ועיצוב חמים" loading="lazy" />
+            </a>
+            <div class="project-info">
+              <span class="project-num">02</span>
+              <h3 class="project-title">מטבח כפרי <span class="italic">וחמים</span></h3>
+              <p class="project-loc">בית פרטי · השרון</p>
+              <p class="project-blurb">חזיתות בגוון קפוצ'ינו, ידיות פליז עתיק, פתרונות אחסון מסביב לפינת אוכל.</p>
+            </div>
+          </article>
+
+          <article class="project project--03 reveal">
+            <a href="#contact" class="project-media" aria-label="פרויקט מטבח יוקרה דרמטי עם אי מרכזי — הרצליה">
+              <img src="clay-banks-4zlQ3CCoIyo-unsplash.jpg" alt="מטבח יוקרה דרמטי בשחור, אי שיש כהה, חלונות ענק נשקפים אל הטבע" loading="lazy" />
+            </a>
+            <div class="project-info">
+              <span class="project-num">03</span>
+              <h3 class="project-title">מטבח יוקרה דרמטי <span class="italic">עם אי מרכזי</span></h3>
+              <p class="project-loc">הרצליה פיתוח</p>
+              <p class="project-blurb">חזיתות שחור מט וגוף עץ אגוז כהה. אי מרכזי כבמה לבישול ולאירוח.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why" id="why" aria-labelledby="whyTitle">
+      <div class="container why-grid">
+        <header class="why-intro section-head">
+          <p class="eyebrow reveal">— ההבדל</p>
+          <h2 id="whyTitle" class="section-title reveal">
+            מה הופך מטבח <span class="italic">"טוב"</span><br />
+            למטבח מושלם?
+          </h2>
+        </header>
+
+        <ol class="why-list">
+          <li class="reveal">
+            <span class="why-num">01</span>
+            <h3>תכנון שחי את המציאות</h3>
+            <p>עיצוב עוצר נשימה זה חשוב, אבל הוא חייב להתבסס קודם כל על השימוש היומיומי שלכם — איפה הקפה של הבוקר, איפה הילדים מכינים שיעורי בית, איפה אתם מארחים.</p>
+          </li>
+          <li class="reveal">
+            <span class="why-num">02</span>
+            <h3>אובססיה לפרטים הקטנים</h3>
+            <p>המילימטרים הם אלה שעושים את כל ההבדל — חיבורים בין משטחים, מרווחי מגירות, סוג הציר, נטיית האור. כל פרט מקבל חשיבה.</p>
+          </li>
+          <li class="reveal">
+            <span class="why-num">03</span>
+            <h3>סטנדרט חומרים בלתי מתפשר</h3>
+            <p>עבודה רק עם חומרי הגלם האיכותיים ביותר ועם אנשי מקצוע מהשורה הראשונה — מסגרים, אבנאים, חשמלאים ומתקיני אלקטרו־מכנים מובילים.</p>
+          </li>
+          <li class="reveal">
+            <span class="why-num">04</span>
+            <h3>אני איתכם לאורך כל הדרך</h3>
+            <p>ליווי אישי וצמוד משלב הסקיצה ועד שהכל עומד במקום. נקודת קשר אחת, שקיפות מלאה, אחריות אישית על כל פרט.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process" aria-labelledby="processTitle">
+      <div class="container">
+        <header class="section-head process-head">
+          <p class="eyebrow reveal">— תהליך העבודה</p>
+          <h2 id="processTitle" class="section-title reveal">
+            הדרך למטבח <span class="italic">החדש שלכם</span>
+          </h2>
+        </header>
+
+        <ol class="process-steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>נפגשים ומכירים</h3>
+            <p>מבינים לעומק מי אתם, מה הצרכים שלכם, ואיך נראה מטבח החלומות שלכם.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>מתכננים ומעצבים</h3>
+            <p>יוצרים סקיצה מותאמת אישית שלוקחת בחשבון הכל — מהנדסת האנוש ועד העיצוב.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>מבצעים ומפקחים</h3>
+            <p>יורדים לשטח, מנהלים את העבודה ודואגים שכל פרט יבוצע על הצד הטוב ביותר.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>מוסרים את המפתח</h3>
+            <p>הרגע שבו אתם מקבלים מטבח מוגמר, נקי, מדויק ומוכן לעבודה.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- STANDARD / FILTER -->
+    <section class="standard" aria-labelledby="standardTitle">
+      <div class="container standard-inner">
+        <p class="eyebrow reveal">— אמירה</p>
+        <h2 id="standardTitle" class="standard-title reveal">
+          הסטנדרט שלי <br /><span class="italic">לא מתאים לכל אחד.</span>
+        </h2>
+        <p class="standard-body reveal">
+          העבודה שלי מיועדת לאנשים שמחפשים איכות ללא פשרות, רמת גימור גבוהה ודיוק מקסימלי. אם אתם מחפשים את הפתרון המהיר והזול ביותר — כנראה שלא תמצאו אותו כאן.
+        </p>
+        <a href="#contact" class="btn btn-outline reveal">
+          <span>אם זה אתם — בואו נדבר</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5l7 7-7 7M21 12H3" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonialsTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">— הלקוחות מספרים</p>
+          <h2 id="testimonialsTitle" class="section-title reveal">
+            <span class="italic">שיחות</span> שנשארות
+          </h2>
+        </header>
+
+        <figure class="testimonial reveal">
+          <svg class="quote-mark" viewBox="0 0 64 48" aria-hidden="true">
+            <path d="M0 48V28C0 12.5 10 2 26 0v10c-8 1.5-12 6-12 14h12v24H0zm38 0V28C38 12.5 48 2 64 0v10c-8 1.5-12 6-12 14h12v24H38z" />
+          </svg>
+          <blockquote>
+            התוצאה הייתה מדויקת עד המילימטר האחרון, וכל הדרך לשם הייתה נעימה, רגועה ומקצועית מאין כמותה.
+          </blockquote>
+          <figcaption>
+            <span class="testimonial-name">משפחה פרטית</span>
+            <span class="testimonial-meta">השרון · 2024</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+
+        <div class="contact-intro">
+          <p class="eyebrow reveal">— יצירת קשר</p>
+          <h2 id="contactTitle" class="section-title reveal">
+            מטבח החלומות שלכם <br />
+            <span class="italic">מתחיל בשיחה.</span>
+          </h2>
+          <p class="contact-lead reveal">
+            השאירו פרטים בטופס או שלחו הודעה ישירה ב‑WhatsApp. אני חוזר אישית לכל פנייה.
+          </p>
+
+          <ul class="contact-meta reveal">
+            <li>
+              <span class="contact-key">טלפון</span>
+              <a href="tel:+972525970972" class="contact-val" dir="ltr">052-5970972</a>
+            </li>
+            <li>
+              <span class="contact-key">אזור</span>
+              <span class="contact-val">תל אביב · השרון · השפלה</span>
+            </li>
+            <li>
+              <span class="contact-key">פגישות</span>
+              <span class="contact-val">בתיאום מראש</span>
+            </li>
+          </ul>
+
+          <a class="whatsapp-btn reveal" href="https://wa.me/972525970972?text=%D7%94%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%A2%20%D7%A4%D7%92%D7%99%D7%A9%D7%AA%20%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%9C%D7%9E%D7%98%D7%91%D7%97" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.7L0 32l8.6-2.3a15.6 15.6 0 0 0 7.4 1.9c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.6c-2.5 0-5-.7-7.1-1.9l-.5-.3-5.1 1.4 1.4-5-.3-.5A12.9 12.9 0 0 1 3.1 16C3.1 8.9 8.9 3.1 16 3.1S28.9 8.9 28.9 16 23.1 29 16 29zm7.4-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.2-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.4-1.4 3.3 0 1.9 1.4 3.8 1.6 4.1.2.3 2.8 4.3 6.8 6 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9 0-.2-.3-.3-.7-.5z" />
+            </svg>
+            <span>שליחת הודעה ב‑WhatsApp</span>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">שם מלא</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="field">
+            <label for="phone">טלפון</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" pattern="[0-9\-\+\s]{9,}" />
+          </div>
+
+          <div class="field">
+            <label for="city">עיר / אזור</label>
+            <input type="text" id="city" name="city" autocomplete="address-level2" />
+          </div>
+
+          <div class="field">
+            <label for="message">פרטים על הפרויקט</label>
+            <textarea id="message" name="message" rows="5" placeholder="גודל המטבח, סגנון מועדף, לוחות זמנים — כל פרט עוזר."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <span>שליחה ל‑WhatsApp</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5l7 7-7 7M21 12H3" /></svg>
+          </button>
+
+          <p class="form-note">בלחיצה על שליחה, ייפתח חלון WhatsApp עם פרטי הפנייה.</p>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark large">A</span>
+        <div>
+          <p class="footer-name">אניס מטבחים</p>
+          <p class="footer-tag">Atelier · מטבחי יוקרה בהתאמה אישית</p>
+        </div>
+      </div>
+
+      <ul class="footer-links" aria-label="קישורים">
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#projects">פרויקטים</a></li>
+        <li><a href="#process">התהליך</a></li>
+        <li><a href="#contact">יצירת קשר</a></li>
+      </ul>
+
+      <div class="footer-contact">
+        <a href="tel:+972525970972" dir="ltr">052-5970972</a>
+        <a href="https://wa.me/972525970972" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="container footer-base">
+      <p>© <span id="year"></span> אניס מטבחים. כל הזכויות שמורות.</p>
+      <p class="footer-craft">Crafted with care.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/972525970972" target="_blank" rel="noopener" aria-label="פתיחת שיחה ב-WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.4 2 7.7L0 32l8.6-2.3a15.6 15.6 0 0 0 7.4 1.9c8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.6c-2.5 0-5-.7-7.1-1.9l-.5-.3-5.1 1.4 1.4-5-.3-.5A12.9 12.9 0 0 1 3.1 16C3.1 8.9 8.9 3.1 16 3.1S28.9 8.9 28.9 16 23.1 29 16 29zm7.4-9.7c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.5-.2.2-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.4-1.4 3.3 0 1.9 1.4 3.8 1.6 4.1.2.3 2.8 4.3 6.8 6 1 .4 1.7.7 2.3.9.9.3 1.8.2 2.5.2.8-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9 0-.2-.3-.3-.7-.5z" />
+    </svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
