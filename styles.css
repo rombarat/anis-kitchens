@@ -1107,8 +1107,8 @@ a.contact-val:hover { color: var(--brass); }
 
   .project,
   .project--02 { grid-template-columns: 1fr; gap: 1.5rem; }
-  .project--02 .project-info { order: 0; padding-inline-end: 0; }
-  .project-info { padding-inline: 0 !important; }
+  .project--02 .project-info { order: -1; padding-inline-end: 0; }
+  .project-info { order: -1; padding-inline: 0 !important; }
 
   .process-steps { grid-template-columns: repeat(2, 1fr); }
   .step:not(:last-child)::after { display: none; }

@@ -19,11 +19,7 @@
     if (!header) return;
     const scrolled = window.scrollY > 24;
     header.classList.toggle('is-scrolled', scrolled);
-
-    if (hero) {
-      const heroBottom = hero.getBoundingClientRect().bottom;
-      header.classList.toggle('is-hero', heroBottom > 80);
-    }
+    header.classList.toggle('is-hero', !scrolled);
 
     if (fab) fab.classList.toggle('is-visible', window.scrollY > 600);
   }
