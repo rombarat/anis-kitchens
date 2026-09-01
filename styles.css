@@ -49,7 +49,11 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -61,6 +65,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* iOS-safe scroll lock (body is fixed while the mobile menu is open) */
+body.nav-open {
+  position: fixed;
+  inset-inline: 0;
+  width: 100%;
+  overflow: hidden;
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
@@ -205,6 +218,7 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
   top: 0;
   z-index: 100;
   padding: 1.4rem 0;
+  padding-inline: env(safe-area-inset-right) env(safe-area-inset-left);
   background: transparent;
   transition: background 360ms var(--ease), padding 360ms var(--ease), border-color 360ms var(--ease);
   border-bottom: 1px solid transparent;
@@ -227,6 +241,20 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
 .site-header.is-hero .brand-mark {
   border-color: rgba(245, 240, 232, 0.6);
   color: var(--ivory-soft);
+}
+
+/* Menu open: header sits on top of the ivory overlay, so force dark-on-light */
+.site-header.is-nav-open,
+.site-header.is-nav-open .brand-name,
+.site-header.is-nav-open .brand-sub,
+.site-header.is-nav-open .primary-nav a { color: var(--ink); }
+.site-header.is-nav-open .brand-mark,
+.site-header.is-nav-open .nav-cta { border-color: var(--ink); color: var(--ink); }
+.site-header.is-nav-open {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
 }
 
 .nav-row {
@@ -317,7 +345,9 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
 
 .nav-toggle {
   display: none;
-  width: 40px; height: 40px;
+  width: 44px; height: 44px;
+  position: relative;
+  z-index: 2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -339,17 +369,32 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
   position: fixed;
   inset: 0;
   background: var(--ivory);
-  z-index: 99;
+  z-index: 90;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: calc(6rem + env(safe-area-inset-top)) var(--gutter) calc(3rem + env(safe-area-inset-bottom));
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 320ms var(--ease);
+  transition: opacity 320ms var(--ease), visibility 0ms linear 320ms;
 }
 .mobile-nav.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transition: opacity 320ms var(--ease), visibility 0ms linear 0ms;
+}
+.mobile-nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin: auto;
 }
 .mobile-nav ul {
   display: flex;
@@ -359,15 +404,30 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
 }
 .mobile-nav a {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  font-size: clamp(1.5rem, 5.5vw, 2.4rem);
   letter-spacing: -0.01em;
   color: var(--ink);
+  display: block;
+  padding: 0.25rem 0.5rem;
 }
 .mobile-nav a.nav-cta {
   margin-top: 1rem;
   font-family: var(--font-body);
   display: inline-block;
 }
+.mobile-nav-phone {
+  font-family: var(--font-body) !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.14em;
+  color: var(--muted) !important;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.5rem !important;
+  width: min(280px, 80%);
+  text-align: center;
+}
+
+/* Anchor targets clear the fixed header on native hash navigation */
+section[id] { scroll-margin-top: 90px; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -442,41 +502,6 @@ h1, h2, h3, h4, p, blockquote, figure, dl, dd { margin: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.hero-scroll {
-  position: absolute;
-  inset-inline-end: var(--gutter);
-  bottom: 2.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.7);
-  z-index: 2;
-}
-.hero-scroll-line {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, rgba(245, 240, 232, 0.7), transparent);
-  position: relative;
-  overflow: hidden;
-}
-.hero-scroll-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  width: 1px;
-  height: 30px;
-  background: var(--brass-soft);
-  animation: scrollPulse 2.4s ease-in-out infinite;
-}
-@keyframes scrollPulse {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(200%); }
 }
 
 .hero-meta {
@@ -1050,11 +1075,22 @@ a.contact-val:hover { color: var(--brass); }
 }
 .footer-craft { font-style: italic; letter-spacing: 0.04em; text-transform: none; }
 
+.field-error {
+  display: none;
+  font-size: 0.8rem;
+  color: #A33A2B;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+.field-error.is-shown { display: block; }
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] { border-color: #A33A2B; }
+
 /* ---------- WhatsApp FAB ---------- */
 .whatsapp-fab {
   position: fixed;
-  bottom: 1.5rem;
-  inset-inline-start: 1.5rem;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  inset-inline-start: calc(1.5rem + env(safe-area-inset-left));
   width: 56px; height: 56px;
   background: var(--whatsapp);
   color: #fff;
@@ -1068,6 +1104,7 @@ a.contact-val:hover { color: var(--brass); }
   transform: translateY(20px) scale(0.85);
   pointer-events: none;
 }
+body.nav-open .whatsapp-fab { opacity: 0 !important; pointer-events: none !important; }
 .whatsapp-fab.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -1079,6 +1116,15 @@ a.contact-val:hover { color: var(--brass); }
   box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
 }
 .whatsapp-fab svg { width: 28px; height: 28px; fill: currentColor; }
+
+/* The contact section has its own big WhatsApp button — hide the floating one
+   there so it stops covering the copy on small screens. */
+.whatsapp-fab.is-hidden { opacity: 0 !important; pointer-events: none !important; }
+
+@media (max-width: 480px) {
+  .whatsapp-fab { width: 50px; height: 50px; bottom: calc(1rem + env(safe-area-inset-bottom)); }
+  .whatsapp-fab svg { width: 24px; height: 24px; }
+}
 
 /* ---------- Reveal Animations ---------- */
 .reveal {
@@ -1134,6 +1180,7 @@ a.contact-val:hover { color: var(--brass); }
   .step:last-child { border-bottom: none; }
 
   .why-list li { grid-template-columns: 1fr; gap: 0.6rem; padding-block: 1.75rem; }
+  .why-num { order: -1; }
   .why-list li:hover { padding-inline: 0; }
 
   .footer-base { flex-direction: column; gap: 0.5rem; }

@@ -15,6 +15,9 @@
   <meta property="og:description" content="תכנון ויצירה של מטבחים מותאמים אישית, בסטנדרט בלתי מתפשר." />
   <meta property="og:image" content="brian-zajac-T28LLOIuJj4-unsplash.jpg" />
 
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A1A1A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23F5F0E8' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A1A1A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23F5F0E8' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -50,8 +53,10 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+  </header>
 
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-modal="true" aria-label="תפריט ניווט">
+    <nav class="mobile-nav-inner" aria-label="ניווט נייד">
       <ul>
         <li><a href="#about">אודות</a></li>
         <li><a href="#projects">פרויקטים</a></li>
@@ -60,15 +65,17 @@
         <li><a href="#testimonials">המלצות</a></li>
         <li><a href="#contact" class="nav-cta">לפגישת ייעוץ</a></li>
       </ul>
-    </div>
-  </header>
+      <a class="mobile-nav-phone" href="tel:+972525970972" dir="ltr">052-5970972</a>
+    </nav>
+  </div>
+
 
   <main id="main">
 
     <!-- HERO -->
     <section class="hero" id="top" aria-labelledby="heroTitle">
       <div class="hero-image" aria-hidden="true">
-        <img src="brian-zajac-T28LLOIuJj4-unsplash.jpg" alt="" loading="eager" fetchpriority="high" />
+        <img src="brian-zajac-T28LLOIuJj4-unsplash.jpg" alt="" loading="eager" fetchpriority="high" width="2000" height="1125" />
         <div class="hero-overlay"></div>
       </div>
 
@@ -93,7 +100,7 @@
       </div>
 
 <div class="hero-meta" aria-hidden="true">
-        <span>EST.</span>
+        <span>Atelier</span>
         <span class="hero-meta-divider"></span>
         <span>תכנון · ייצור · ליווי</span>
       </div>
@@ -133,7 +140,7 @@
         </div>
 
         <figure class="about-figure reveal">
-          <img src="interior-modern-kitchen-with-wooden-details.jpg" alt="פינת מטבח אינטימית עם פרטי עץ כהים ושיש טבעי" loading="lazy" />
+          <img src="interior-modern-kitchen-with-wooden-details.jpg" alt="פינת מטבח אינטימית עם פרטי עץ כהים ושיש טבעי" loading="lazy" width="2000" height="1273" decoding="async" />
           <figcaption>פרויקט נבחר · פרטים אינטימיים</figcaption>
         </figure>
       </div>
@@ -152,7 +159,7 @@
 
           <article class="project project--01 reveal">
             <a href="#contact" class="project-media" aria-label="פרויקט מודרני בקווים נקיים — תל אביב">
-              <img src="3d-rendering-white-minimal-kitchen-with-wood-decoration.jpg" alt="מטבח לבן מינימליסטי עם אי וכיסאות בר, תאורת תליה ושיש דרמטי" loading="lazy" />
+              <img src="3d-rendering-white-minimal-kitchen-with-wood-decoration.jpg" alt="מטבח לבן מינימליסטי עם אי וכיסאות בר, תאורת תליה ושיש דרמטי" loading="lazy" width="2000" height="1333" decoding="async" />
             </a>
             <div class="project-info">
               <span class="project-num">01</span>
@@ -164,7 +171,7 @@
 
           <article class="project project--02 reveal">
             <a href="#contact" class="project-media" aria-label="פרויקט מטבח כפרי וחמים — בית פרטי בשרון">
-              <img src="beautiful-shot-modern-house-kitchen.jpg" alt="מטבח לבן מואר אור טבעי, אי משיש לבן, תאורת תליה ועיצוב חמים" loading="lazy" />
+              <img src="beautiful-shot-modern-house-kitchen.jpg" alt="מטבח לבן מואר אור טבעי, אי משיש לבן, תאורת תליה ועיצוב חמים" loading="lazy" width="2000" height="1335" decoding="async" />
             </a>
             <div class="project-info">
               <span class="project-num">02</span>
@@ -176,7 +183,7 @@
 
           <article class="project project--03 reveal">
             <a href="#contact" class="project-media" aria-label="פרויקט מטבח יוקרה דרמטי עם אי מרכזי — הרצליה">
-              <img src="clay-banks-4zlQ3CCoIyo-unsplash.jpg" alt="מטבח יוקרה דרמטי בשחור, אי שיש כהה, חלונות ענק נשקפים אל הטבע" loading="lazy" />
+              <img src="clay-banks-4zlQ3CCoIyo-unsplash.jpg" alt="מטבח יוקרה דרמטי בשחור, אי שיש כהה, חלונות ענק נשקפים אל הטבע" loading="lazy" width="2000" height="1333" decoding="async" />
             </a>
             <div class="project-info">
               <span class="project-num">03</span>
@@ -346,12 +353,14 @@
         <form class="contact-form reveal" id="contactForm" novalidate>
           <div class="field">
             <label for="name">שם מלא</label>
-            <input type="text" id="name" name="name" required autocomplete="name" />
+            <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="nameError" />
+            <span class="field-error" id="nameError"></span>
           </div>
 
           <div class="field">
             <label for="phone">טלפון</label>
-            <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" pattern="[0-9\-\+\s]{9,}" />
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" dir="ltr" aria-describedby="phoneError" />
+            <span class="field-error" id="phoneError"></span>
           </div>
 
           <div class="field">
@@ -384,7 +393,7 @@
         <span class="brand-mark large">A</span>
         <div>
           <p class="footer-name">אניס מטבחים</p>
-          <p class="footer-tag">Atelier · מטבחי יוקרה בהתאמה אישית</p>
+          <p class="footer-tag">מטבחי יוקרה בהתאמה אישית · <span dir="ltr">Atelier</span></p>
         </div>
       </div>
 
@@ -403,7 +412,7 @@
 
     <div class="container footer-base">
       <p>© <span id="year"></span> אניס מטבחים. כל הזכויות שמורות.</p>
-      <p class="footer-craft">Crafted with care.</p>
+      <p class="footer-craft" dir="ltr">Crafted with care.</p>
     </div>
   </footer>
 
